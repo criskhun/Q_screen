@@ -111,7 +111,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             exchange_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -136,7 +136,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             ass1_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -155,11 +155,11 @@ public class Main extends javax.swing.JFrame {
         else{
             asse1_setb.setText(asse1_seta.getText());
             asse1_voice.setText("1");
-            try{
-            Thread.sleep(5000);
-            asse1_voice.setText("1");
-            } catch (Exception ex){
-            }
+//            try{
+//            Thread.sleep(5000);
+//            asse1_voice.setText("1");
+//            } catch (Exception ex){
+//            }
         }
         
     }
@@ -175,7 +175,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             ass2_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -214,7 +214,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             marn_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -253,7 +253,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             term_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -292,7 +292,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             cash1_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -331,7 +331,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             cash2_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -370,7 +370,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             enco1_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -409,7 +409,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             enco2_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -448,7 +448,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             enco3_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -482,7 +482,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             ad_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -516,7 +516,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             fd_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -550,7 +550,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             opm_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -584,7 +584,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             psd_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+           pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -618,7 +618,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             ppd_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -652,7 +652,7 @@ public class Main extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             esd_tbl.setModel(DbUtils.resultSetToTableModel(rs));
-
+            pst.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }

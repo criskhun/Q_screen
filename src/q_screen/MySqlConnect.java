@@ -19,7 +19,7 @@ public class MySqlConnect {
     public static Connection ConnectDB(){
                       try{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:Mysql://10.3.2.6:3306/queuing","root","");
+            Connection conn = DriverManager.getConnection("jdbc:Mysql://localhost:3306/queuing","root","");
   //JOptionPane.showMessageDialog(null,"connected");
             return conn;
             

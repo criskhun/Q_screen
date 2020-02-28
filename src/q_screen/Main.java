@@ -222,7 +222,7 @@ public class Main extends javax.swing.JFrame {
         
     if(rows>0){
     int column = 0;
-    int row = 0;
+    int row = 0; 
     
     String value = marn_tbl.getModel().getValueAt(row, column).toString();
     marndis.setText(value);
@@ -242,7 +242,7 @@ public class Main extends javax.swing.JFrame {
         
     }
     else{
-    marndis.setText("Next Counter Please");
+    marndis.setText("------");
     }
     }
     

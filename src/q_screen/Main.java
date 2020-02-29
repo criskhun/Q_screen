@@ -15,7 +15,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import javax.swing.event.DocumentEvent;
@@ -54,6 +56,8 @@ public class Main extends javax.swing.JFrame {
         psd_call();
         ppd_call();
         esd_call();
+        Alarmtest ac=new Alarmtest();
+        ac.checkAlarm(13,13);
     }
     
     public void all_ref(){
@@ -155,11 +159,6 @@ public class Main extends javax.swing.JFrame {
         else{
             asse1_setb.setText(asse1_seta.getText());
             asse1_voice.setText("1");
-//            try{
-//            Thread.sleep(5000);
-//            asse1_voice.setText("1");
-//            } catch (Exception ex){
-//            }
         }
         
     }
@@ -194,11 +193,6 @@ public class Main extends javax.swing.JFrame {
         else{
             asse2_setb.setText(asse2_seta.getText());
             asse2_voice.setText("1");
-//            try{
-//            Thread.sleep(5000);
-//            asse1_voice.setText("1");
-//            } catch (Exception ex){
-//            }
         }
         
     }
@@ -233,11 +227,6 @@ public class Main extends javax.swing.JFrame {
         else{
             marn_setb.setText(marn_seta.getText());
             marn_voice.setText("1");
-//            try{
-//            Thread.sleep(5000);
-//            asse1_voice.setText("1");
-//            } catch (Exception ex){
-//            }
         }
         
     }
@@ -272,11 +261,6 @@ public class Main extends javax.swing.JFrame {
         else{
             term_setb.setText(term_seta.getText());
             term_voice.setText("1");
-//            try{
-//            Thread.sleep(5000);
-//            asse1_voice.setText("1");
-//            } catch (Exception ex){
-//            }
         }
         
     }
@@ -311,11 +295,6 @@ public class Main extends javax.swing.JFrame {
         else{
             cash1_setb.setText(cash1_seta.getText());
             cash1_voice.setText("1");
-//            try{
-//            Thread.sleep(5000);
-//            asse1_voice.setText("1");
-//            } catch (Exception ex){
-//            }
         }
         
     }
@@ -350,11 +329,6 @@ public class Main extends javax.swing.JFrame {
         else{
             cash2_setb.setText(cash2_seta.getText());
             cash2_voice.setText("1");
-//            try{
-//            Thread.sleep(5000);
-//            asse1_voice.setText("1");
-//            } catch (Exception ex){
-//            }
         }
         
     }
@@ -389,11 +363,6 @@ public class Main extends javax.swing.JFrame {
         else{
             enco1_setb.setText(enco1_seta.getText());
             enco1_voice.setText("1");
-//            try{
-//            Thread.sleep(5000);
-//            asse1_voice.setText("1");
-//            } catch (Exception ex){
-//            }
         }
         
     }
@@ -428,11 +397,6 @@ public class Main extends javax.swing.JFrame {
         else{
             enco2_setb.setText(enco2_seta.getText());
             enco2_voice.setText("1");
-//            try{
-//            Thread.sleep(5000);
-//            asse1_voice.setText("1");
-//            } catch (Exception ex){
-//            }
         }
         
     }
@@ -1913,7 +1877,26 @@ public interface SimpleDocumentListener extends DocumentListener {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public class Alarmtest {
+    public void checkAlarm(final int a, final int b){
+        Thread t=new Thread(){
+            public void run(){
+                int wl=0;
+                while(wl==0){
+                    Calendar c=new GregorianCalendar();
+                    int hour=c.get(Calendar.HOUR_OF_DAY);
+                    int mins=c.get(Calendar.MINUTE);
+                    if(a==hour&&b==mins){
+                        System.exit(0);
+                        break;
+                    }
+                }
+            }
+        };
+        t.setPriority(Thread.MIN_PRIORITY);
+        t.start();
+    }
+    }
     /**
      * @param args the command line arguments
      */

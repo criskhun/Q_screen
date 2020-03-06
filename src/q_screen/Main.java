@@ -57,7 +57,7 @@ public class Main extends javax.swing.JFrame {
         ppd_call();
         esd_call();
         Alarmtest ac=new Alarmtest();
-        ac.checkAlarm(13,13);
+        ac.checkAlarm(00,00);
     }
     
     public void all_ref(){
